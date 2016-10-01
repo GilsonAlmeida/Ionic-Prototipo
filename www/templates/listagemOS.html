@@ -1,0 +1,17 @@
+<ion-view title="Listagem O.S" id="page1">
+    <ion-content padding="true" class="has-header">
+        <button id="listagemOS-button3" class="button button-positive  button-block">Carregar O.S</button>
+        <ion-list id="listagemOS-list1" class="manual-list-fullwidth"  >
+            <ion-item id="listagemOS-list-item1" ng-repeat='item in listaOS track by $index' ng-controller="adicionarLaudoCtrl"  >
+			 {{item.codigo}}/{{item.exercicio}}
+             <div style="float:right">
+				<button class="button button-icon icon ion-search" ui-sref="listagemLaudos"> </button>
+				<button class="button button-icon icon ion-android-add-circle" ui-sref="adicionarLaudo" ng-click='addLaudo(item)'  >  </button>
+			 </div>	
+			</ion-item>
+            
+        </ion-list>
+        <a ui-sref="adicionarLaudoManual" id="listagemOS-button1" class="button button-positive  button-block">Informar Manual</a>
+        <button id="listagemOS-button2" class="button button-positive  button-block">Descarregar Todas O.S</button>
+    </ion-content>	
+</ion-view>

@@ -1,0 +1,9 @@
+{
+    "jscodehints.detectedExclusions": [
+        "C:/Users/Vania/Documents/Prototipo/platforms/android/platform_www/plugins/cordova-plugin-device/www/device.js",
+        "C:/Users/Vania/Documents/Prototipo/platforms/android/platform_www/plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+        "C:/Users/Vania/Documents/Prototipo/platforms/android/platform_www/plugins/cordova-plugin-statusbar/www/statusbar.js",
+        "C:/Users/Vania/Documents/Prototipo/platforms/android/platform_www/plugins/ionic-plugin-keyboard/www/android/keyboard.js",
+        "C:/Users/Vania/Documents/Prototipo/platforms/android/platform_www/cordova.js"
+    ]
+}
