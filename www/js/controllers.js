@@ -1,37 +1,33 @@
 angular.module('app.controllers', [])
   
-.controller('listagemOSCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
-	
-	$scope.listaOS = [
-	{
-		"codigo":"10",
-		"exercicio":"2016"
-	},
-	{
-		"codigo":"13",
-		"exercicio":"2016"
-	},			  ];
-	
+.controller('listagemOSCtrl',  
+	function ($scope, $stateParams,ItemLaudoService) {
+		
+		$scope.listaOS = [
+		{
+			"codigo":"10",
+			"exercicio":"2016"
+		},
+		{
+			"codigo":"13",
+			"exercicio":"2016"
+		},			  ];
+		
 
+		$scope.addLaudo=function(item){
+					PropriedadesCompartilhadas.setItem(item);
+		};	
 
-}])
+	})
    
 
 
 
-.controller('adicionarLaudoCtrl', ['$scope', '$stateParams', 
-function ($scope, $stateParams) {
+.controller('adicionarLaudoCtrl', function ($scope, $stateParams,ItemLaudoService) {
 	
-		 $scope.addLaudo=function(item){
-				$scope.codigo = item.codigo ;	
-				
-			};	
-
-
-}])
+	console.log(ItemLaudoService.getItem());
+	
+})
    
 .controller('visualizarLaudoCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
