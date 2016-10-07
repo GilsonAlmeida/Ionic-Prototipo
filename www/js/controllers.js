@@ -15,18 +15,24 @@ angular.module('app.controllers', [])
 		
 
 		$scope.addLaudo=function(item){
-					PropriedadesCompartilhadas.setItem(item);
+			ItemLaudoService.setItem(item);
 		};	
 
 	})
-   
 
+.controller('adicionarLaudoCtrl', function ($scope, $filter,$stateParams,ItemLaudoService) {
+	$scope.itemLaudo = ItemLaudoService.getItem();
+	$scope.dataLaudo = $filter('date')(new Date(),'dd/MM/yyyy');
 
+	$scope.options = {
+		  format: 'dd/mm/yyyy', // ISO formatted date
+		  monthsFull: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+		  weekdaysShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
+		  today:'Hoje',
+		  clear:'Limpar'
 
-.controller('adicionarLaudoCtrl', function ($scope, $stateParams,ItemLaudoService) {
-	
-	console.log(ItemLaudoService.getItem());
-	
+	}
+
 })
    
 .controller('visualizarLaudoCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller

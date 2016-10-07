@@ -10,7 +10,8 @@
         <form id="adicionarLaudo-form2" class="list" >
             
             <label class="item item-input" id="adicionarLaudo-input3" >
-                <span class="input-label" >O.S: {{codigo}} - Data:07/09/2016</span>
+                <span class="input-label" >O.S: {{itemLaudo.codigo}}/{{itemLaudo.exercicio}} - </span>
+                Data:  <input type="text"   pick-a-date="date" pick-a-date-options="options" ng-Model="dataLaudo"/> 
             </label>
                 
 
